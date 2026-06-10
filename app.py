@@ -10,6 +10,7 @@ init_db()
 with open('config.yaml') as file:
     config = yaml.load(file, Loader=yaml.SafeLoader)
 
+# Initialize Authenticator
 authenticator = stauth.Authenticate(
     config['credentials'], 
     config['cookie']['name'], 
@@ -19,11 +20,12 @@ authenticator = stauth.Authenticate(
 
 st.title('Sales Route Management System')
 
-# CORRECTED LOGIN LOGIC:
-# 1. Call the login method without assigning it to variables
-authenticator.login('Login', 'main')
+# --- REVISED LOGIN LOGIC ---
+# Instead of passing 'main', use the login widget object directly
+# and handle the login through the returned object.
+login_tab = authenticator.login() 
 
-# 2. Access the status and user details from session_state
+# After calling .login(), the library populates st.session_state
 if st.session_state["authentication_status"]:
     st.sidebar.write(f"Welcome, {st.session_state['name']}")
     authenticator.logout('Logout', 'sidebar')
