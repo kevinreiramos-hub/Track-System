@@ -11,4 +11,4 @@ credentials:
     sales1:
       email: sales1@example.com
       name: Sales Person 1
-      password: "PASTE_SECOND_HASH_HERE"
+      password: "$2b$12$bU8.hpNGFlcpD4DA/n./eeWfj6x/1ns8mjbTCXS8O2A8HmtX.onrm"
