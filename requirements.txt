@@ -1,0 +1,10 @@
+streamlit
+streamlit-authenticator
+pandas
+folium
+streamlit-folium
+ortools
+geopy
+streamlit-geolocation
+sqlalchemy
+pyyaml
