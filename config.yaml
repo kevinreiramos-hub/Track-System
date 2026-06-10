@@ -7,8 +7,8 @@ credentials:
     admin:
       email: admin@example.com
       name: Admin User
-      password: "PASTE_FIRST_HASH_HERE"
+      password: "123"
     sales1:
       email: sales1@example.com
       name: Sales Person 1
-      password: "PASTE_SECOND_HASH_HERE"
+      password: "123"
