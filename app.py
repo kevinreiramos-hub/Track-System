@@ -14,7 +14,7 @@ authenticator = stauth.Authenticate(
 )
 
 st.title('Sales Route Management System')
-name, status, username = authenticator.login('main', 'main')
+name, status, username = authenticator.login('Login', 'main')
 
 if status:
     st.sidebar.write(f'Welcome, {name}')
